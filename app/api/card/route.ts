@@ -6,7 +6,7 @@ export async function POST(req: Request) {
 		const body = await req.json();
 
 		const res = await axios.post(
-			`${process.env.TABLECRM_API_URL}?token=${process.env.TABLECRM_TOKEN}`,
+			`${process.env.TABLECRM_API_URL}${process.env.TABLECRM_TOKEN}`,
 			body,
 			{
 				headers: {
