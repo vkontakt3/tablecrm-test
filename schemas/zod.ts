@@ -7,7 +7,7 @@ export const productSchema = z.object({
 		.min(1, "Краткое описание обязательно")
 		.max(40, "Максимум 40 символов"),
 	description_long: z.string().min(1, "Полное описание обязательно"),
-	code: z.string().min(1, "Код товара обязателен"),
+	code: z.string().min(5, "Код должен быть больше 5 символов"),
 	unit: z.number(),
 	category: z.number(),
 	cashback_type: z.string(),
