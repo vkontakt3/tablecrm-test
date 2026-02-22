@@ -2,10 +2,7 @@ import { z } from "zod";
 
 export const productSchema = z.object({
 	name: z.string().min(1, "Название обязательно"),
-	description_short: z
-		.string()
-		.min(1, "Краткое описание обязательно")
-		.max(40, "Максимум 40 символов"),
+	description_short: z.string().min(1, "Краткое описание обязательно"),
 	description_long: z.string().min(1, "Полное описание обязательно"),
 	code: z.string().min(5, "Код должен быть больше 5 символов"),
 	unit: z.number(),
