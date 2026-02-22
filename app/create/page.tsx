@@ -68,6 +68,7 @@ export default function Create({ className }: Props) {
 			}
 
 			toast.success("Товар успешно создан 🚀");
+
 			router.push("/");
 		} catch (error) {
 			toast.error("Произошла ошибка при создании товара");
